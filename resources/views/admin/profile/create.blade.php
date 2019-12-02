@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         
-                        
+                        <!--
                         {{-- 性別の所だけ、ブートストラップ試し --}}
                         <div class="form-group row">
                             <label class="col-md-2">性別</label>
@@ -54,6 +54,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                          
                          <div class="form-group row">
                             <label class="col-md-2">性別</label>
