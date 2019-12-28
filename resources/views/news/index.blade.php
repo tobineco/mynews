@@ -8,7 +8,7 @@
         <title>MyNewsFront</title>
     </head>
     <body>
-        <h1>Myニュースフロント画面</h1>
+        <h1>Myニュース★フロント画面</h1>
         
     {{-- layouts/front.blade.phpを読み込む --}}
     @extends('layouts.front')
