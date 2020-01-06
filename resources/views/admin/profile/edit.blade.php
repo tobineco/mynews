@@ -39,43 +39,46 @@
                             </div>
                         </div>
                         
-                        {{ $profile_form }}
+                        <!-- {{ $profile_form }} -->
                         
-                       
+                        <!--
                         {{-- 性別の所だけ、ブートストラップ試し --}}
                         <div class="form-group row">
                             <label class="col-md-2">性別</label>
                             <div class="col-md-5">
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                    <label class="btn btn-secondary">
-                                   <input type="radio" name="gender" value="male" {{ old('gender', $profile_form['gender']) == 'male' ? 'checked' : '' }} > 男
+                                   <input type="radio" name="gender" id="dansei" value='male' {{ old('gender', $profile_form->gender) == 'male' ? 'checked' : '' }} > 男
                                    </label>
                                    <label class="btn btn-secondary">
-                                   <input type="radio" name="gender" value="female" {{ old('gender', $profile_form['gender']) == 'female' ? 'checked' : '' }}> 女
+                                   <input type="radio" name="gender" id="josei" value='female' {{ old('gender', $profile_form->gender) == 'female' ? 'checked' : '' }}> 女
                                    </label>
+                                   
+                                   ★<input type="radio" name="like" id="apple" value='apple' {{ old('like','apple') == 'apple' ? 'checked' : '' }}>
+                                   
                                 </div>
                             </div>
                         </div>
+                        -->
                         
-                        
-                         <!--
-                         {{-- 性別の所だけ、edit画面でデザイン変えてみる --}}
+                         
+                         {{-- 性別の所、結局ブートストラップ無しのHTMLラジオボタンに戻す --}}
                          <div class="form-group row">
                             <label class="col-md-2">性別</label>
                             <div class="col-md-1">
                                 <h4>男</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="male">
+                                <input type="radio" class="form-control" name="gender" value="male" {{ old('gender', $profile_form->gender) == 'male' ? 'checked' : '' }} >
                             </div>
                             <div class="col-md-1">
                                 <h4>女</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="female">
+                                <input type="radio" class="form-control" name="gender" value="female" {{ old('gender', $profile_form->gender) == 'female' ? 'checked' : '' }} >
                             </div>
                         </div>
-                        -->
+                        
                         
                         <div class="form-group row">
                             <label class="col-md-2">趣味</label>
