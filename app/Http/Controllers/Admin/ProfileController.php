@@ -65,16 +65,11 @@ class ProfileController extends Controller
         // Validation をかける
         $this->validate($request, Profile::$rules);
         
-        // Profile Model　からデータを取得する（再）
+        // Profile Model　からデータを取得する（）
         $profile = Profile::find($request->id);
         
-        // 送信されてきたフォームデータを格納する（順を前に亀山メンター指示）
+        // 送信されてきたフォームデータを格納する（）
         $profile_form = $request->all(); 
-        
-        // Profile Model からデータを取得する(亀山メンター指示)
-        // $profile = Profile::find($profile_form->id);
-        // Profile Model からデータを取得する(元々記述？404) 
-        // $profile = Profile::find($request->id);
         
         unset($profile_form['_token']);
         
