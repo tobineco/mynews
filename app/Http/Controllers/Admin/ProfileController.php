@@ -38,6 +38,17 @@ class ProfileController extends Controller
         
         return redirect('admin/profile/create');
     }
+    
+    public function index(Request $request)
+    {
+        $input_name = $request->input_name;
+        if ($input_name != '') {
+            $posts = Profile::where('name', $input_name)->get();
+        } else {
+            $posts = Profile::all();
+        }
+        return view('admin.profile.index', ['posts'=>$posts, 'input_name'=>$input_name]);
+    }
 
     public function edit(Request $request)
     {
@@ -54,12 +65,14 @@ class ProfileController extends Controller
         // Validation をかける
         $this->validate($request, Profile::$rules);
         
-        // 送信されてきたフォームデータを格納する（順を前に）
+        // Profile Model　からデータを取得する（再）
+        $profile = Profile::find($request->id);
+        
+        // 送信されてきたフォームデータを格納する（順を前に亀山メンター指示）
         $profile_form = $request->all(); 
         
         // Profile Model からデータを取得する(亀山メンター指示)
-        $profile = Profile::find($profile_form->id);
-       
+        // $profile = Profile::find($profile_form->id);
         // Profile Model からデータを取得する(元々記述？404) 
         // $profile = Profile::find($request->id);
         
@@ -75,7 +88,16 @@ class ProfileController extends Controller
         $profilehistory->edited_at = Carbon::now();
         $profilehistory->save();
         
-        return redirect('admin/profile/edit');
+        return redirect('admin/profile/');
+    }
+    
+    public function delete(Request $request)
+    {
+        // 該当するProfile Modelを取得
+        $profile = Profile::find($request->id);
+        // 削除する
+        $profile->delete();
+        return redirect('admin/profile/');
     }
 
 }
