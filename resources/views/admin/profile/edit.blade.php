@@ -69,13 +69,13 @@
                                 <h4>男</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="male" {{ old('gender', $profile_form->gender) == 'male' ? 'checked' : '' }} >
+                                <input type="radio" class="form-control" name="gender" value="男" {{ old('gender', $profile_form->gender) == '男' ? 'checked' : '' }} >
                             </div>
                             <div class="col-md-1">
                                 <h4>女</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="female" {{ old('gender', $profile_form->gender) == 'female' ? 'checked' : '' }} >
+                                <input type="radio" class="form-control" name="gender" value="女" {{ old('gender', $profile_form->gender) == '女' ? 'checked' : '' }} >
                             </div>
                         </div>
                         

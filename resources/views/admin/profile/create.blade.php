@@ -62,13 +62,13 @@
                                 <h4>男</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="male">
+                                <input type="radio" class="form-control" name="gender" value="男">
                             </div>
                             <div class="col-md-1">
                                 <h4>女</h>
                             </div>
                             <div class="col-md-1">
-                                <input type="radio" class="form-control" name="gender" value="female">
+                                <input type="radio" class="form-control" name="gender" value="女">
                             </div>
                         </div>
                         <div class="form-group row">
