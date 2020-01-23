@@ -8,7 +8,7 @@
         <title>MyNewsFront</title>
     </head>
     <body>
-        <h1>Myニュース★フロント画面</h1>
+        <h2>Myニュース★フロント画面</h2>
         
     {{-- layouts/front.blade.phpを読み込む --}}
     @extends('layouts.front')
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr color="#c0c0c0">
+                <hr color="#c0c0c0">
                 @endforeach
             </div>
         </div>
