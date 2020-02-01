@@ -42,38 +42,7 @@
         @endif
                       
         <hr color="#c0c0c0">
-        <div class="row">
-            <div class="posts col-md-8 mx-auto mt-3">
-                @if(!is_null($posts))
-                    @foreach($posts as $post)
-                        <div class="post">
-                            <div class="row">
-                                <div class="text col-md-12">
-                                    <div class="date">
-                                        {{ $post->updated_at->format('Y年m月d日') }}
-                                    </div>
-                                    <div class="title">
-                                        {{ $post->name }}
-                                    </div>
-                                    <div class="body mt-3">
-                                        {{ $post->gender }}
-                                    </div>
-                                    <div class="body mt-3">
-                                        {{ $post->hobby }}
-                                    </div>
-                                    <div class="body mt-3">
-                                        {{ $post->introduction }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <hr color="#c0c0c0">
-                    @endforeach
-                @endif
-            </div>
-        </div>
-        
-    　　@endsection
+    @endsection
         
     </body>
 </html>
